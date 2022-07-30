@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 
         {/* Result */}
         <p className="mt-8">Result</p>
-        <h1 className="text-2xl md:text-3xl species mt-8 w-[80%] break-words">
+        <h1 className="text-2xl md:text-3xl species mt-8 w-[80%] break-words text-center">
           {text}
         </h1>
       </main>

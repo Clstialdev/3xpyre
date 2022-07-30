@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #ced5e7;
+}
+
+html,
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: "Species";
+  font-style: normal;
+  font-display: swap;
+  src: local("Species"), url(/fonts/species.otf) format("opentype");
+}
+
+.species {
+  font-family: species;
+}

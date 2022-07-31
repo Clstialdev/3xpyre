@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/logo.jpg" />
       </Head>
 
-      <main className="container mx-auto flex flex-col items-center justify-center h-screen p-4 relative">
+      <main className="container mx-auto flex flex-col items-center justify-center h-screen p-4 relative min-h-[667px]">
         {/* Header */}
         <Header />
         {/* Content */}

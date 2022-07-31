@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const GLOBAL_FONTS = [
   "ARKXEM-ULTRA",
@@ -18,6 +19,20 @@ const Home: NextPage = () => {
   const getIndexOfCurrentFont = (currentFont = "species") => {
     return GLOBAL_FONTS.indexOf(currentFont);
   };
+
+  const router = useRouter();
+  const { font: fontQueryValue } = router.query;
+
+  useEffect(() => {
+    const tempFontArray = GLOBAL_FONTS.map((font) => font.toLowerCase());
+    if (
+      fontQueryValue &&
+      tempFontArray.indexOf(fontQueryValue.toString()) > 0
+    ) {
+      setOutputFont(fontQueryValue.toString());
+      console.log("index", tempFontArray.indexOf(fontQueryValue.toString()));
+    }
+  }, [fontQueryValue]);
 
   return (
     <>
@@ -87,7 +102,7 @@ const Home: NextPage = () => {
         <p className="mt-8">SEQUEL</p>
         <h1
           style={{ fontFamily: outputFont }}
-          className="text-2xl md:text-3xl mt-8 w-[80%] break-words text-center "
+          className="text-2xl md:text-3xl mt-8 w-[80%] break-words text-center select-none"
         >
           {text}
         </h1>

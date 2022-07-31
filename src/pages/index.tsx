@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   };
 
   const router = useRouter();
-  const { font: fontQueryValue } = router.query;
+  const { typeface: fontQueryValue } = router.query;
 
   useEffect(() => {
     const tempFontArray = GLOBAL_FONTS.map((font) => font.toUpperCase());

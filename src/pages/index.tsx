@@ -24,13 +24,10 @@ const Home: NextPage = () => {
   const { font: fontQueryValue } = router.query;
 
   useEffect(() => {
-    const tempFontArray = GLOBAL_FONTS.map((font) => font.toLowerCase());
-    if (
-      fontQueryValue &&
-      tempFontArray.indexOf(fontQueryValue.toString()) > 0
-    ) {
-      setOutputFont(fontQueryValue.toString());
-      console.log("index", tempFontArray.indexOf(fontQueryValue.toString()));
+    const tempFontArray = GLOBAL_FONTS.map((font) => font.toUpperCase());
+    const font = fontQueryValue?.toString().toUpperCase();
+    if (font && tempFontArray.indexOf(font.toString()) > 0) {
+      setOutputFont(font.toString());
     }
   }, [fontQueryValue]);
 

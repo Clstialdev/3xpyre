@@ -44,14 +44,14 @@ const Home: NextPage = () => {
         <Header />
         {/* Content */}
         {/* Heading */}
-        <h1 className="text-xl md:text-5xl mb-12 -mt-12 font-bold uppercase text-center">
+        <h1 className="text-xl md:text-5xl mb-12 md:-mt-12 font-bold uppercase text-center">
           ﹝ TYPE PORTAL ﹞
         </h1>
 
-        {/* drropdown Menu */}
-        <p>Select Font</p>
+        {/* dropdown Menu */}
+        <p className="sm:text-base text-sm">Select Font</p>
 
-        <div className="mt-4 flex justify-between items-center space-x-8 select-none w-[95%] md:w-[33%]">
+        <div className="mt-4 flex justify-between items-center space-x-[2%] select-none w-[95%] md:w-[33%]">
           <div
             className="p-4 bg-[#ced5e7] rounded text-black hover:cursor-pointer"
             onClick={() =>
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           >
             {"<"}
           </div>
-          <p className="text-xl text-center">{outputFont}</p>
+          <p className=" text-lg sm:text-xl text-center">{outputFont}</p>
           <div
             className="p-4 bg-[#ced5e7] rounded text-black hover:cursor-pointer"
             onClick={() =>
@@ -92,17 +92,25 @@ const Home: NextPage = () => {
           placeholder="(EXPERIMENTAL TEXT)"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          className="bg-[#CED5E7] border-white rounded w-[95%] text-lg py-2 px-4 md:w-[33%] text-black font-bold sans-serif"
+          className="bg-[#CED5E7] border-white rounded w-[95%] text-base sm:text-lg py-2 px-4 md:w-[33%] text-black font-bold sans-serif"
         />
 
         {/* Result */}
-        <p className="mt-8">SEQUEL</p>
+        <p className="mt-8 text-sm sm:text-base">SEQUEL</p>
         <h1
           style={{ fontFamily: outputFont }}
-          className="text-2xl md:text-3xl mt-8 w-[80%] break-words text-center select-none"
+          className="text-xl md:text-3xl mt-4 sm:mt-8 w-[80%] break-words text-center select-none"
         >
           {text}
         </h1>
+
+        {/* Purchase Btn */}
+        <a
+          href="https://3xpyre.com"
+          className="rounded bg-[#CED5E7] text-black mt-8 px-4 py-2"
+        >
+          Purchase
+        </a>
 
         <Footer />
       </main>
@@ -117,7 +125,7 @@ const Header: NextPage = () => {
     <header className="absolute top-0 left-0 w-full flex  items-center px-[5%] justify-center ">
       {/* Logo */}
       <a href="https://3xpyre.com">
-        <div className="h-36 w-36 relative mt-12">
+        <div className="h-20 w-20 md:h-36 md:w-36 relative mt-4 md:mt-12">
           <Image src="/logo.jpg" alt="" layout="fill" objectFit="contain" />
         </div>
       </a>
@@ -137,13 +145,8 @@ const Footer: NextPage = () => {
   return (
     <header className="absolute bottom-0 left-0 w-full flex  items-center px-[5%] justify-center ">
       {/* Logo */}
-      <div className="relative mb-4 w-full flex justify-center items-center">
-        <p>
-          ALL RIGHTS RESERVED{" "}
-          <a href="https://3xpyre.com" className="underline">
-            3XPYRE
-          </a>
-        </p>
+      <div className="relative mb-4 w-full flex justify-center items-center md:text-base text-[11px] text-center">
+        <p>ALL RIGHTS RESERVED 3XPYRE</p>
       </div>
     </header>
   );

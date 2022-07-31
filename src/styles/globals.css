@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "KRYPTONIUM-MASTER";
+  font-style: normal;
+  font-display: swap;
+  src: local("KRYPTONIUM-MASTER"), url(/fonts/kryptonium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Species";
+  font-style: normal;
+  font-display: swap;
+  src: local("Species"), url(/fonts/species.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "ARKXEM-ULTRA";
+  font-style: normal;
+  font-display: swap;
+  src: local("ARKXEM-ULTRA"), url(/fonts/arkxem.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "BLADEVII-PRO";
+  font-style: normal;
+  font-display: swap;
+  src: local("BLADEVII-PRO"), url(/fonts/blade.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "NANOVIRUS-ALPHA";
+  font-style: normal;
+  font-display: swap;
+  src: local("NANOVIRUS-ALPHA"), url(/fonts/nanovirus.otf) format("opentype");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12,15 +47,9 @@
 html,
 body {
   background-color: black;
+  font-family: KRYPTONIUM-MASTER;
 }
 
-@font-face {
-  font-family: "Species";
-  font-style: normal;
-  font-display: swap;
-  src: local("Species"), url(/fonts/species.otf) format("opentype");
-}
-
-.species {
-  font-family: species;
+.sans-serif {
+  font-family: sans-serif;
 }

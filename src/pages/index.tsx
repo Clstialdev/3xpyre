@@ -106,7 +106,7 @@ const Home: NextPage = () => {
 
         {/* Purchase Btn */}
         <a
-          href="https://3xpyre.com"
+          href="https://www.3xpyre.com"
           className="rounded bg-[#CED5E7] text-black mt-8 px-4 py-2"
         >
           Purchase
@@ -124,7 +124,7 @@ const Header: NextPage = () => {
   return (
     <header className="absolute top-0 left-0 w-full flex  items-center px-[5%] justify-center ">
       {/* Logo */}
-      <a href="https://3xpyre.com">
+      <a href="https://www.3xpyre.com">
         <div className="h-20 w-20 md:h-36 md:w-36 relative mt-4 md:mt-12">
           <Image src="/logo.jpg" alt="" layout="fill" objectFit="contain" />
         </div>

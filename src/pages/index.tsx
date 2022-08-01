@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         </h1>
 
         {/* dropdown Menu */}
-        <p className="sm:text-base text-sm">Select Font</p>
+        <p className="sm:text-base text-sm">Select Typeface</p>
 
         <div className="mt-4 flex justify-between items-center space-x-[2%] select-none w-[95%] md:w-[33%]">
           <div
@@ -146,7 +146,14 @@ const Footer: NextPage = () => {
     <header className="absolute bottom-0 left-0 w-full flex  items-center px-[5%] justify-center ">
       {/* Logo */}
       <div className="relative mb-4 w-full flex justify-center items-center md:text-base text-[11px] text-center">
-        <p>ALL RIGHTS RESERVED 3XPYRE</p>
+        <p>
+          <span className="text-[8px] text-xs">
+            TYPE PORTAL IS FOR DEMONSTRATION PURPOSES ONLY ALL TYPEFACES MUST BE
+            PURCHASED THROUGH <a href="https://www.3xpyre.com">3XPYRE.COM</a>{" "}
+            <br />
+          </span>
+          ALL RIGHTS RESERVED 3XPYRE
+        </p>
       </div>
     </header>
   );
